@@ -38,11 +38,11 @@ that if your network has just learned the average teaching signal
 (ignoring the input altogether), it is 1.0, and if your network 
 has learned the patterns perfectly, it is 0.0.  Here it is:
 
-        SUM(all pats (p)) SUM(all outputs (i)) (Teacher_pi - output_pi)^2
-RMSE =    -----------------------------------------------------------
-       SUM(all pats (p)) SUM(all outputs (i)) (Teacher_pi - avg_Teacher_i)^2
+	        SUM(all pats (p)) SUM(all outputs (i)) (Teacher_pi - output_pi)^2
+	RMSE =    -----------------------------------------------------------
+	       SUM(all pats (p)) SUM(all outputs (i)) (Teacher_pi - avg_Teacher_i)^2
 
-avg_Teacher_i = [SUM(all pats (p)) Teacher_pi]/NPATS
+	avg_Teacher_i = [SUM(all pats (p)) Teacher_pi]/NPATS
 
 So the denominator above is constant, and can be computed by
 a couple of passes through the training set, once to get the 
