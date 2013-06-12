@@ -1,0 +1,26 @@
+
+The pattern files contained in this directory map a 6 unit
+input vector <x1 x2 ... x6> to a 2 bit output vector <y1 y2>
+such that y1 is 1 iff x1+x2+x3 > x4+x5+x6, and y2 is 1
+iff x4+x5+x6 > x1+x2+x3;  y1 and y2 are otherwise 0.   More
+intuitively, the leftmost output unit is "on" whenever
+more of the left-side input units are on than right-side
+input units;  the rightmost output unit is "on" whenever the
+opposite condition holds.   
+
+
+lr.pat		-this file contains 32 training patterns for
+		 the mapping described above
+
+lr_test.pat	-this file contains all 64 possible training
+		 patterns for the mapping described above
+
+start.wts	-this file contains a set of initial weights
+
+
+*note :  a perceptron trained on just the 32 patterns in 'lr.pat'
+	 from the initial weights stored in 'start.wts' should be 
+	 able to perform correctly on all patterns in 'lr_test.pat'
+
+
+Gary sez: A perceptron started from 0 weights should work too!

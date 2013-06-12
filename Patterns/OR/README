@@ -1,0 +1,31 @@
+
+**NOTE**
+Do not use the weights and/or seed from this directory in
+your submission for this assignment -- they are here as
+examples only (generate your own!).   Feel free to use
+the 'or.pat' file, however.
+********
+
+To create all of the files present in this directory, the
+'or.pat' file was first constructed, and then 'perceptron'
+was called twice.   Below is an exerpt from the typescript 
+of the actual session : 
+
+
+bonzo % ls or.*
+or.pat 
+
+bonzo % perceptron -p or.pat -S or.seed -s or.wts
+epoch   1 :  patterns incorrect =   1
+epoch   2 :  patterns incorrect =   2
+epoch   3 :  patterns incorrect =   1
+epoch   4 :  patterns incorrect =   0
+
+bonzo % ls or.*
+or.pat    or.seed    or.wts
+
+bonzo % perceptron -p or.pat -l or.wts -t or.out
+
+bonzo % ls or.*
+or.out  or.pat  or.seed  or.wts
+
